@@ -1,0 +1,233 @@
+/* Base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f3fa; /* soft light purple background */
+  color: #3a2c4a; /* dark muted purple text */
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background: #6a0dad; /* deep purple */
+  box-shadow: 0 2px 8px rgba(106, 13, 173, 0.5);
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo {
+  user-select: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #d6a8ff; /* soft lavender highlight */
+  text-decoration: underline;
+}
+
+/* Hero Section */
+header.hero {
+  background: linear-gradient(135deg, #a066ff, #6a0dad); /* purple gradient */
+  color: white;
+  padding: 6rem 1rem 5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(106, 13, 173, 0.5);
+}
+
+header.hero h1 {
+  font-size: 3.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+header.hero .highlight {
+  color: #e6dbf8; /* pale lavender */
+  text-shadow: 2px 2px 5px rgba(230, 219, 248, 0.6);
+}
+
+header.hero p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #cdb4db; /* soft purple text */
+}
+
+/* Main container */
+main {
+  max-width: 1100px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 3.5rem;
+  background: #ede7f6; /* pale purple */
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(106, 13, 173, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.section:hover {
+  background-color: #d6bcfa; /* lighter purple hover */
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b0082; /* indigo purple */
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #b39ddb; /* soft purple border */
+  padding-bottom: 0.4rem;
+}
+
+/* About Section */
+.intro-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(106, 13, 173, 0.45);
+  flex-shrink: 0;
+}
+
+.intro-section div {
+  font-size: 1.15rem;
+  color: #4b0082;
+  line-height: 1.7;
+}
+
+/* Grid Sections */
+.grid-section .grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: white;
+  padding: 1.6rem 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(106, 13, 173, 0.15);
+  color: #5a3755;
+  font-weight: 600;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  color: #4b0082;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.4rem;
+  margin: 0;
+  list-style-type: disc;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Buttons / Links */
+a.btn-link {
+  display: inline-block;
+  background-color: #6a0dad;
+  color: white !important;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 0.6rem;
+}
+
+a.btn-link:hover,
+a.btn-link:focus {
+  background-color: #4b0082;
+  text-decoration: none;
+}
+
+/* Contact Section */
+#contact p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+#contact a {
+  font-weight: 700;
+  color: #6a0dad;
+}
+
+#contact a:hover {
+  color: #4b0082;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #6a0dad;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border-top: 3px solid #b39ddb;
+  user-select: none;
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-section img.profile-pic {
+    width: 60%;
+    max-width: 240px;
+    margin-bottom: 1.5rem;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
+}
